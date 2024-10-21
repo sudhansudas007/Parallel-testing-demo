@@ -10,6 +10,13 @@ public class Login {
         Thread.sleep(2000);
         driver.findElementByAccessibilityId("email_txt").sendKeys(email);
         driver.findElementByAccessibilityId("password_txt").sendKeys(password);
-        driver.findElementByAccessibilityId("login_btn");
-    }
+        driver.hideKeyboard();
+        driver.findElementByAccessibilityId("login_btn").click();
+        boolean calendar=driver.findElementByAccessibilityId("Calendar").isDisplayed();
+        if(calendar) {
+            System.out.println("Login successful");
+        }else{
+            System.out.println("Login failed");
+        }
 }
+    }

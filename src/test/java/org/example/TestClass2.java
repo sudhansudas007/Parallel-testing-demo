@@ -27,7 +27,7 @@ public class TestClass2 extends DesiredCaps{
     @Test(priority = 2)
     public void login() throws InterruptedException {
         Login obj = new Login();
-        obj.LoginwithEmail(driver, "sudhansu641@setmore.com", "demo@1234");
+        obj.LoginwithEmail(driver, "sudhansu2011@setmore.com", "demo@1234");
     }
 
 }

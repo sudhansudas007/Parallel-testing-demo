@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class DesiredCaps {
     public AndroidDriver<MobileElement> DesiredCapabilities(String androidVersion, String deviceName, String portNumber) throws MalformedURLException {
@@ -19,6 +20,7 @@ public class DesiredCaps {
         caps.setCapability("appActivity", "com.anywhere.container.presentation.ui.MainActivity");
         caps.setCapability("noReset", true);
         AndroidDriver<MobileElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:"+portNumber+"/"), caps);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return driver;
     }
 }
