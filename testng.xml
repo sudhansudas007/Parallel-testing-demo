@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Appium Parallel Suite" parallel="tests">
+    <test name="Test2">
+        <classes>
+            <class name="org.example.TestClass2"/>
+        </classes>
+    </test>
+    <test name="Test1">
+        <classes>
+            <class name="org.example.TestClass1"/>
+        </classes>
+    </test>
+</suite>
